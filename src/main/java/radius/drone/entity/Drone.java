@@ -9,11 +9,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import radius.drone.util.DroneModel;
 import radius.drone.util.DroneState;
 
 @Entity
@@ -43,9 +42,9 @@ public class Drone {
 	@OneToMany(mappedBy="drone")
 	private  List<DroneBatteryHistory> droneBatteryHistories ;
 	
-	@ManyToOne
-	@JoinColumn(name="model_id", nullable=false)
-	private  DroneModel droneModel ;
+	@Column(name="model")
+	@Enumerated(EnumType.STRING)
+	private  DroneModel model ;
 
 	public int getId() {
 		return id;
@@ -103,13 +102,14 @@ public class Drone {
 		this.droneBatteryHistories = droneBatteryHistories;
 	}
 
-	public DroneModel getDroneModel() {
-		return droneModel;
+	public DroneModel getModel() {
+		return model;
 	}
 
-	public void setDroneModel(DroneModel droneModel) {
-		this.droneModel = droneModel;
+	public void setModel(DroneModel model) {
+		this.model = model;
 	}
+
 
 	
 	

@@ -1,39 +1,32 @@
 package radius.drone.form;
 
+import radius.drone.util.DroneModel;
+import radius.drone.util.DroneState;
+
 public class DroneDTO {
 
 	private String serialNumber;
-	private String model;
-	private double weight;
+	
+	private DroneModel model;
+	private int weight;
 	private int currentBattery;
-	private String state;
-	
-	
-	
-	public DroneDTO(String serialNumber, String model, double weight, int currentBattery, String state) {
-		super();
-		this.serialNumber = serialNumber;
-		this.model = model;
-		this.weight = weight;
-		this.currentBattery = currentBattery;
-		this.state = state;
-	}
+	private DroneState state;
 	public String getSerialNumber() {
 		return serialNumber;
 	}
 	public void setSerialNumber(String serialNumber) {
 		this.serialNumber = serialNumber;
 	}
-	public String getModel() {
+	public DroneModel getModel() {
 		return model;
 	}
-	public void setModel(String model) {
+	public void setModel(DroneModel model) {
 		this.model = model;
 	}
-	public double getWeight() {
+	public int getWeight() {
 		return weight;
 	}
-	public void setWeight(double weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 	public int getCurrentBattery() {
@@ -42,12 +35,23 @@ public class DroneDTO {
 	public void setCurrentBattery(int currentBattery) {
 		this.currentBattery = currentBattery;
 	}
-	public String getState() {
+	public DroneState getState() {
 		return state;
 	}
-	public void setState(String state) {
+	public void setState(DroneState state) {
+		this.state = state;
+	}
+	public DroneDTO(String serialNumber, DroneModel model, int weight, int currentBattery, DroneState state) {
+		super();
+		this.serialNumber = serialNumber;
+		this.model = model;
+		this.weight = weight;
+		this.currentBattery = currentBattery;
 		this.state = state;
 	}
 	
+	
+	
+
 	
 }
