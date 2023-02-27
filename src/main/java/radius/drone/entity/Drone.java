@@ -28,7 +28,7 @@ public class Drone {
 	private String serialNumber;
 	
 	@Column(name="weight")
-	private double weight;
+	private int weight;
 	
 	@Column(name="current_battery")
 	private int currentBattery;
@@ -63,11 +63,11 @@ public class Drone {
 		this.serialNumber = serialNumber;
 	}
 
-	public double getWeight() {
+	public int getWeight() {
 		return weight;
 	}
 
-	public void setWeight(double weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 
