@@ -1,4 +1,4 @@
-package radius.drone.drone;
+package radius.drone;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
