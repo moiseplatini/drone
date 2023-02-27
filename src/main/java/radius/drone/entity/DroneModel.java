@@ -18,7 +18,7 @@ public class DroneModel {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id ;
 	
-	@Column(name="name")
+	@Column(unique=true, name="name")
 	private String name;
 	
 	@OneToMany(mappedBy="droneModel")

@@ -24,7 +24,7 @@ public class Drone {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
-	@Column(name="serianl_number")
+	@Column(unique=true, name="serianl_number")
 	private String serialNumber;
 	
 	@Column(name="weight")
